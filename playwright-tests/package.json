@@ -1,0 +1,15 @@
+{
+  "name": "saucedemo-playwright-tests",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Playwright automation tests for SauceDemo (Swag Labs) — QA Internship Task",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0"
+  }
+}
