@@ -1,18 +1,15 @@
 # Part 1: Research & Theoretical Knowledge
 
-> **Module 1 QA Internship Task**
-> Author: Mohamed Habash | Date: February 2026
-
 ---
 
 ## 1. Core Testing Concepts
 
 ### 1.1 Test Case vs. Test Scenario
 
-| Aspect         | Test Scenario                                                                                       | Test Case                                                                                                                                                                    |
-| -------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| **Definition** | A high-level description of _what_ to test. It captures a user's goal or a feature to be validated. | A detailed, step-by-step document that describes _how_ to test. It includes specific inputs, actions, and expected results.                                                  |     |
-| **Example**    | "Verify the user can complete a purchase."                                                          | Step 1: Login with `standard_user`. Step 2: Add "Backpack" to cart. Step 3: Click Cart. Step 4: Click Checkout... Expected Result: "Thank you for your order!" is displayed. |
+| Aspect | Test Scenario | Test Case |
+| --- | --- | --- |
+| **Definition** | A high-level description of *what* to test. It captures a user's goal or a feature to be validated. | A detailed, step-by-step document that describes *how* to test. It includes specific inputs, actions, and expected results. |
+| **Example** | "Verify the user can complete a purchase." | Step 1: Login with `standard_user`.<br>
 
 **Why do we need scenarios before detailed steps?**
 
