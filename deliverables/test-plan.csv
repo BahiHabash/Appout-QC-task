@@ -1,0 +1,69 @@
+ID,Category,Title,Description,Status,User
+TC-LOGIN-001,Login,Standard Login,Input standard user and password,Pass,standard_user
+TC-LOGIN-002,Login,Locked Login,Input locked user and password,Pass,locked_out_user
+TC-LOGIN-003,Login,Problem Login,Input problem user and password,Pass,problem_user
+TC-LOGIN-004,Login,Performance Login,Input glitch user and password,Pass,performance_glitch_user
+TC-LOGIN-005,Login,Error Login,Input error user and password,Pass,error_user
+TC-LOGIN-006,Login,Visual Login,Input visual user and password,Pass,visual_user
+TC-LOGIN-007,Login,Manual Blank User,Leave username empty,Pass,none
+TC-LOGIN-008,Login,Manual Blank Pass,Leave password empty,Pass,none
+TC-LOGIN-009,Login,Manual Invalid User,Input wrong username,Pass,none
+TC-LOGIN-010,Login,Manual Invalid Pass,Input wrong password,Pass,none
+TC-PROD-001,Products,Sort AZ,Sort A to Z (Standard),Pass,standard_user
+TC-PROD-002,Products,Sort ZA,Sort Z to A (Standard),Pass,standard_user
+TC-PROD-003,Products,Sort Low-High,Sort price low to high (Standard),Pass,standard_user
+TC-PROD-004,Products,Sort High-Low,Sort price high to low (Standard),Pass,standard_user
+TC-PROD-005,Products,Broken Z-A Sort,Problem user sorts Z-A,Fail,problem_user
+TC-PROD-006,Products,Image Integrity,Verify all images load (Standard),Pass,standard_user
+TC-PROD-007,Products,Broken Images,Verify images fail (Problem),Fail,problem_user
+TC-PROD-008,Products,Add Backpack,Add backpack to cart,Pass,standard_user
+TC-PROD-009,Products,Add Bike Light,Add bike light to cart,Pass,standard_user
+TC-PROD-010,Products,Add Shirt (Red),Add red shirt to cart,Pass,standard_user
+TC-PROD-011,Products,Add Shirt (Bolt),Add bolt shirt to cart,Pass,standard_user
+TC-PROD-012,Products,Add Onesie,Add onesie to cart,Pass,standard_user
+TC-PROD-013,Products,Add Fleece,Add fleece to cart,Pass,standard_user
+TC-PROD-014,Products,Error User Add,Add backpack fails (Error),Fail,error_user
+TC-PROD-015,Products,Problem User Add,Add onesie fails (Problem),Fail,problem_user
+TC-PROD-016,Products,Remove Item,Remove backpack from inventory,Pass,standard_user
+TC-PROD-017,Products,Reset App,Reset app state works,Pass,standard_user
+TC-PROD-018,Products,Menu Links,Verify sidebar links exist,Pass,standard_user
+TC-PROD-019,Products,Social Links,Verify footer icons exist,Pass,standard_user
+TC-PROD-020,Products,Visual Alignment,Check header alignment,Pass,visual_user
+TC-CART-001,Cart,One Item,Check cart with 1 item,Pass,standard_user
+TC-CART-002,Cart,Multi Items,Check cart with 5 items,Pass,standard_user
+TC-CART-003,Cart,Remove from Cart,Remove backpack from list,Pass,standard_user
+TC-CART-004,Cart,Empty Checkout,Proceed without items,Fail,standard_user
+TC-CART-005,Cart,Continue Shopping,Return to products page,Pass,standard_user
+TC-CART-006,Cart,Sticky Remove,Error user cannot remove shirt,Fail,error_user
+TC-CART-007,Cart,Persistence,Cart state after logout/login,Pass,standard_user
+TC-CART-008,Cart,Isolation,Cart not shared during same browser if possible,Pass,standard_user
+TC-CART-009,Cart,Description,Check item description matches,Pass,standard_user
+TC-CART-010,Cart,Price,Check item price matches,Pass,standard_user
+TC-CART-011,Cart,Visual distortion,Check cart layout under visual_user,Fail,visual_user
+TC-CART-012-020,Cart,Combinations,Explore permutations with all users,Pass,all
+TC-CHECK-001,Checkout,Valid Info,Submit Jane Doe 12345,Pass,standard_user
+TC-CHECK-002,Checkout,Names Blank,Submit with blank first name,Pass,standard_user
+TC-CHECK-003,Checkout,Last Blank,Submit with blank last name,Pass,standard_user
+TC-CHECK-004,Checkout,Zip Blank,Submit with blank zip,Pass,standard_user
+TC-CHECK-005,Checkout,Numerical Name,Submit with '12345' first name,Pass,standard_user
+TC-CHECK-006,Checkout,Numerical Zip,Submit with 'ABCDE' zip,Pass,standard_user
+TC-CHECK-007,Checkout,Sanity SQL Injection,Submit string with quotes,Pass,standard_user
+TC-CHECK-008,Checkout,Long First Name,Submit 100 character name,Pass,standard_user
+TC-CHECK-009,Checkout,Last Name Glitch,Problem user inputs last name,Fail,problem_user
+TC-CHECK-010-030,Checkout,Permutations,Field permutations across users,Fail,all
+TC-VIEW-001,Overview,Subtotal Calc,Check item subtotal math,Pass,standard_user
+TC-VIEW-002,Overview,Tax Calc,Check 8% tax calculation,Pass,standard_user
+TC-VIEW-003,Overview,Grand Total,Check Subtotal + Tax,Pass,standard_user
+TC-VIEW-004,Overview,Payment Info,Verify SauceCard #31337 string,Pass,standard_user
+TC-VIEW-005,Overview,Shipping Info,Verify Free Pony Express string,Pass,standard_user
+TC-VIEW-006,Overview,Finish Order,Submit order and redirect,Pass,standard_user
+TC-VIEW-007,Overview,Cancel Order,Cancel and redirect back,Pass,standard_user
+TC-VIEW-008,Overview,Multi-item List,Verify all items are listed in overview,Pass,standard_user
+TC-VIEW-009,Overview,Info Persistence,Return to Step 1 and check fields,Pass,standard_user
+TC-VIEW-010,Overview,Sluggishness,Check performance delay in transition,Fail,performance_glitch_user
+TC-DONE-001,Complete,Thank You,Verify success header,Pass,standard_user
+TC-DONE-002,Complete,Dispatch,Verify dispatch text,Pass,standard_user
+TC-DONE-003,Complete,Pony Image,Verify pony image loads,Pass,standard_user
+TC-DONE-004,Complete,Back Home,Verify click returns to product page,Pass,standard_user
+TC-DONE-005,Complete,Logout,Verify logout after purchase,Pass,standard_user
+TC-DONE-006-010,Complete,Visual Glitches,Layout checks on complete page,Fail,visual_user
