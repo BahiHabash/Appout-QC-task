@@ -1,28 +1,48 @@
-# Repository Overview
+# SauceDemo QA Internship Project - Swag Labs
 
-This repository contains the following components:
+This repository contains the comprehensive QA suite for the SauceDemo (Swag Labs) application, completed as part of the QC Internship task. The project is divided into three core phases: Research, Manual Testing, and Automation.
 
-## [Research Document](research-document.md)
+---
 
-Includes research and analysis related to the project.
+## 📑 Project Navigation
 
-## [Manual Tests](manual-tests.md)
+| Phase | Description | Link |
+| :--- | :--- | :--- |
+| **01 Research** | Theoretical QA concepts, EP/BVA techniques, and automation strategy. | [Research Document](research-document.md) |
+| **02 Manual Testing** | 100+ test scenarios and a detailed execution plan. | [Manual Test Case Design](deliverables/README.md#manual-testing) |
+| **03 Automation** | Playwright POM suite covering positive, negative, and glitch flows. | [Playwright Suite](playwright-tests/README.md) |
+| **04 Reporting** | 30 defect reports and final pass/fail metrics. | [Bug Reports & Metrics](deliverables/README.md#reporting) |
 
-Contains documentation for manual testing procedures.
+---
 
-## Playwright Tests
+## 📊 Live Deliverables (Google Sheets)
 
-Automated tests for the application using Playwright. This folder includes:
+For a better viewing experience and dynamic filtering, please refer to the following Google Sheets:
 
-- [Configuration File](playwright-tests/playwright.config.js): Configuration settings for Playwright.
-- [Package File](playwright-tests/package.json): Lists dependencies and scripts for the Playwright tests.
-- [Pages](playwright-tests/pages): Contains page object models for the application.
-  - [SwagLabs.js](playwright-tests/pages/SwagLabs.js): Page object for the Swag Labs application.
-- [Tests](playwright-tests/tests): Contains test specifications.
-  - [Cart Test](playwright-tests/tests/cart.spec.js): Tests related to the shopping cart functionality.
-  - [Checkout Test](playwright-tests/tests/checkout.spec.js): Tests for the checkout process.
-  - [Login Test](playwright-tests/tests/login.spec.js): Tests for the login functionality.
+- 📋 **[Test Plan & Execution Matrix](https://docs.google.com/spreadsheets/d/13JBKaxw35hOFgV09x8cmpsXTEF1JRztwAcrlVkC5GxA/edit?gid=187292589#gid=187292589)**
+- 🐞 **[Defect Report (30 Bugs Found)](https://docs.google.com/spreadsheets/d/1wZeAjCRCGQ-Z7vnrZqVDGmOj7POVef6kLREahrloR84/edit?usp=sharing)**
 
-## [Playwright README](playwright-tests/README.md)
+---
 
-Additional documentation for the Playwright tests.
+## 🛠 Tech Stack
+- **Framework:** [Playwright](https://playwright.dev/)
+- **Language:** JavaScript
+- **Pattern:** Page Object Model (POM)
+- **Reporting:** Playwright HTML Reports & CSV/JSON Export
+
+---
+
+## 🚀 Quick Start (Automation)
+To run the automated test suite locally:
+```bash
+cd playwright-tests
+npm install
+npx playwright test
+```
+Refer to the [Automation README](playwright-tests/README.md) for detailed execution commands and debugging options.
+
+---
+
+## 👨‍💻 Author
+**Mohammed Habash (Bahi)**
+*Senior QA Engineer Role Simulation*

@@ -1,8 +1,16 @@
-### 1. Prerequisites
+# Phase 2: Playwright Automation Suite (POM)
+
+This directory contains the robust Playwright-based automated testing engine for the SauceDemo ecosystem. The project follows a strict **Page Object Model (POM)** design pattern to ensure clean, readable, and highly maintainable tests.
+
+---
+
+## 🛠 Prerequisites
 
 Ensure you have **Node.js** installed on your machine.
 
-### 2. Installation
+---
+
+## 🏗 Installation
 
 Open your terminal in the project root folder and run:
 
@@ -12,36 +20,36 @@ npm install
 
 # Install Playwright browser binaries
 npx playwright install
-
-```
-
-### 3. Running Tests
-
-You can run your tests in different modes depending on whether you are debugging or running a full suite:
-
-* **Run all tests (Headless):**
-`npx playwright test`
-* **Run a specific file (e.g., Login):**
-`npx playwright test tests/login.spec.js`
-* **Run in UI Mode (Interactive):**
-`npx playwright test --ui`
-*This is highly recommended for debugging the `problem_user` defects visually.*
-* **Debug Mode:**
-`npx playwright test --debug`
-
-### 4. Viewing Results
-
-After the tests complete, Playwright generates a detailed HTML report:
-
-```bash
-npx playwright show-report
-
 ```
 
 ---
 
-### Folder Architecture Reminder
+## 🧪 Execution Commands
 
-* **`pages/`**: Contains `SwagLabs.js` (Locators and UI actions).
-* **`tests/`**: Contains `.spec.js` files (Test scenarios and assertions).
-* **`playwright.config.js`**: Global settings (BaseURL, timeouts, and browser configurations).
+| Command | Purpose |
+| :--- | :--- |
+| `npx playwright test` | Run the full test suite (headless). |
+| `npx playwright test tests/login.spec.js` | Run a specific test file. |
+| `npx playwright test --ui` | Open the interactive Playwright UI (**Recommended for debugging glitches**). |
+| `npx playwright test --debug` | Step through the code with the Playwright inspector. |
+
+---
+
+## 📂 Folder Architecture
+
+- **`pages/`**: Contains the Page Objects (`LoginPage.js`, `InventoryPage.js`, `CartPage.js`, `CheckoutStepOnePage.js`, `CheckoutStepTwoPage.js`, `CheckoutCompletePage.js`).
+- **`tests/`**: Contains `.spec.js` test suites divided by functional logic and user profiles.
+- **`playwright.config.js`**: Global settings for timeouts, viewports, and browsers.
+
+---
+
+## 📊 Automated Results Summary
+
+The suite automatically checks for **intentional site flaws** in the `problem_user` and `error_user` profiles:
+- **`problem_user_glitches.spec.js`**: Validates images, sorting logic, and checkout failures.
+- **`performance_throttling.spec.js`**: Asserts the 5-second login latency for the performance glitch account.
+- **`negative_validation.spec.js`**: Confirms proper error messages for invalid/empty inputs.
+
+---
+
+[← Back to Root](../README.md)
