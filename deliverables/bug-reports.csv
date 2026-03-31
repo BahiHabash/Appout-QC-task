@@ -1,0 +1,31 @@
+ID,Severity,Priority,Category,Title,Description,Expected,Actual,User
+BUG-001,Medium,P2,Functional,Empty Cart Checkout Allowed,The system allows users to proceed to the checkout flow even when the cart contains 0 items.,Checkout button should be disabled,User redirected to info page,standard_user
+BUG-002,Low,P3,Validation,Unchecked Name Lengths (100+ chars),Checkout Step 1 allows input strings exceeding 100 characters in name fields.,Character limit warning,System accepts long strings,standard_user
+BUG-003,Low,P3,Validation,Alphanumeric Postal Code Accepted,The Zip code field accepts non-numeric characters.,Validation error,System accepts 'abcde',standard_user
+BUG-004,Low,P3,UX,Scroll Position Reset on Navigation,Scrolling is lost when returning to products page.,Maintain scroll position,Resets to top,standard_user
+BUG-005,Low,P2,Visual,Read-only QTY field in Cart,QTY field cannot be edited.,Updateable quantity,Field is fixed,standard_user
+BUG-006,Low,P3,UX,Post-Purchase Redirection Logic,Back Home returns to products without logout claridad.,Option for order history or logout,Redirect to products,standard_user
+BUG-007,High,P1,Visual,Broken Inventory Images,All product images are replaced by 404 images.,Unique product images,Generic 404 images appear,problem_user
+BUG-008,High,P1,Functional,Broken Sorting Logic,Sorting dropdown fails to reorder items.,Sorted list,Order remains random,problem_user
+BUG-009,High,P1,Functional,Last Name Field Overwrite,Last Name field is cleared or rejected on submission.,Proceed to overview,Error: 'Last Name is required',problem_user
+BUG-010,Medium,P2,Functional,Unresponsive Add to Cart (Onesie),Onesie cannot be added to cart.,Badge updates,Nothing happens,problem_user
+BUG-011,Low,P3,Visual,Broken Social Redirects (LinkedIn),LinkedIn icon leads to broken URL.,Sauce Labs LinkedIn,Error or null redirect,problem_user
+BUG-012,High,P1,Functional,Standard Backpack Add-to-Cart Failure,Backpack is unresponsive.,Add successfully,Button is dead,error_user
+BUG-013,High,P1,Functional,Sticky Cart Items (Remove Failure),Remove button fails for Bolt Shirt.,Item removed,Item remains,error_user
+BUG-014,High,P1,Functional,Checkout Step 1 False Error,Results in 'First Name required' for populated field.,Success,Error message shown,error_user
+BUG-015,Medium,P2,Functional,Z-A Sorting Dead,Sorting by Name Z-A results in no UI change.,Sorting changed,Layout locked,error_user
+BUG-016,Medium,P3,Performance,Fixed 5s Login Latency,Intentional delay on login.,Instant Login,Fixed 5s freeze,performance_glitch_user
+BUG-017,Low,P3,Performance,Inventory Loading Lag,UI freezing during navigation.,Smooth interaction,Stuttering/Lag,performance_glitch_user
+BUG-018,Low,P3,Performance,Checkout Page Transition Latency,Delayed transition to Step 2.,Instant,2-3s wait,performance_glitch_user
+BUG-019,Low,P3,Visual,Misaligned Filter Icon Overlay,Filter triangle overlaps text.,Clean alignment,Overlapping UI,visual_user
+BUG-020,Low,P3,Visual,Stretched Image Aspect Ratios,Images and button icons appear distorted.,Correct 1:1,Stretched images,visual_user
+BUG-021,Low,P3,Visual,Incorrect Brand Font Weight,Header Swag Labs uses incorrect font.,Standard font,Thicker brand font,visual_user
+BUG-022,Low,P3,Visual,Off-center Login Error Icons,Red icons not centered in fields.,Centered,Misplaced icons,visual_user
+BUG-023,Low,P2,Functional,Reset App State Refresh Dependency,Badge not cleared until F5.,Instant clear,F5 required,all
+BUG-024,Medium,P2,Security,Cross-User Cart Leakage,Cart info persists across logins.,Clean cart for User B,Shared cart state,all
+BUG-025,High,P2,Security,Inventory Direct Access Unauthenticated,UI briefly visible before redirect.,Instant redirect,Brief flash of list,guest
+BUG-026,Low,P3,UX,About Sidebar Link Redirects Externally,Primary window redirect out of test site.,Internal info,External redirect,all
+BUG-027,Low,P2,Functional,Logout Session Persistence,Glitches carry over if storage not wiped.,Clean state,Occasional carryover,all
+BUG-028,Low,P3,Visual,Footer Overlap on Small Viewports,Copyright text overlaps on mobile.,Responsive wrapping,Text collision,all
+BUG-029,Low,P3,UX,Broken Ctrl+Backspace Shortcut,Input shortcuts not supported.,Standard word delete,Special char added,all
+BUG-030,Low,P3,Functional,Tax Rounding Discrepancy,Tax rounding error in overview.,$2.40,$2.41,all
