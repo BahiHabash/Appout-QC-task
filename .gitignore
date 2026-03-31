@@ -1,11 +1,17 @@
-
 # Playwright
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+playwright-tests/test-results/
+playwright-tests/playwright-report/
+playwright-tests/test-results.json
+playwright-tests/junit-results.xml
+playwright-tests/.cache/
+playwright-tests/.auth/
 
+# Submission Artifacts
+SauceDemo_QA_Internship_Submission.zip
+
+# Agent Context
 .agents/
 .agent/
+_agents/
+_agent/
